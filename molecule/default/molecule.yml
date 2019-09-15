@@ -1,0 +1,34 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: docker
+lint:
+  name: yamllint
+platforms:
+  - name: ${DISTRO:-ubuntu-18.04}
+    image: "darkwizard242/ansible:${DISTRO:-ubuntu-18.04}"
+    pre_build_image: true
+provisioner:
+  name: ansible
+  log: true
+  lint:
+    name: ansible-lint
+scenario:
+  name: default
+  test_sequence:
+    - lint
+    - destroy
+    - syntax
+    - create
+    - converge
+    - idempotence
+    - verify
+    - cleanup
+    - destroy
+verifier:
+  name: testinfra
+  options:
+    verbose: true
+  lint:
+    name: flake8

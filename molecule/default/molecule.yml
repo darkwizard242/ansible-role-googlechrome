@@ -8,7 +8,10 @@ lint:
 platforms:
   - name: ${DISTRO:-ubuntu-18.04}
     image: "darkwizard242/ansible:${DISTRO:-ubuntu-18.04}"
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
     pre_build_image: true
+    privileged: true
 provisioner:
   name: ansible
   log: true

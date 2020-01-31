@@ -22,11 +22,11 @@ def test_googlechrome_binary_which(host):
     assert host.check_output('which google-chrome') == '/usr/bin/google-chrome'
 
 
-def test_atom_repo_exists(host):
+def test_googlechrome_repo_exists(host):
     assert host.file('/etc/apt/sources.list.d/google-chrome.list').exists or \
       host.file('/etc/yum.repos.d/google-chrome.repo').exists
 
 
-def test_atom_repo_file(host):
+def test_googlechrome_repo_file(host):
     assert host.file('/etc/apt/sources.list.d/google-chrome.list').is_file or \
       host.file('/etc/yum.repos.d/google-chrome.repo').is_file

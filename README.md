@@ -1,18 +1,16 @@
+[![Build Status](https://travis-ci.com/darkwizard242/ansible-role-googlechrome.svg?branch=master)](https://travis-ci.com/darkwizard242/ansible-role-googlechrome) ![Ansible Role](https://img.shields.io/ansible/role/43354?color=dark%20green%20) ![Ansible Role](https://img.shields.io/ansible/role/d/43354?label=role%20downloads) ![Ansible Quality Score](https://img.shields.io/ansible/quality/43354?label=ansible%20quality%20score) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-googlechrome&metric=alert_status)](https://sonarcloud.io/dashboard?id=ansible-role-googlechrome) ![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/darkwizard242/ansible-role-googlechrome?label=release) ![GitHub repo size](https://img.shields.io/github/repo-size/darkwizard242/ansible-role-googlechrome?color=orange&style=flat-square)
 
-Ansible Role: googlechrome
-=========
+# Ansible Role: googlechrome
 
-Role to install (_by default_) `google-chrome-stable` package for Debian based and EL based systems  or uninstall (_if  passed as var_)  on **Debian** based and **EL** based systems.
+Role to install (_by default_) `google-chrome-stable` package for Debian based and EL based systems or uninstall (_if passed as var_) on **Debian** based and **EL** based systems.
 
-Requirements
-------------
+## Requirements
 
 None.
 
-Role Variables
---------------
+## Role Variables
 
-Available variables are listed below (located in  `defaults/main.yml`):
+Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 googlechrome_app: google-chrome-stabl
@@ -53,15 +51,14 @@ Variable `googlechrome_repo_el_enabled`: Boolean operation for setting repositor
 
 Variable `googlechrome_repo_el_filename`: Name of file to save for googlechrome's repo in `/etc/yum.repos.d/`
 
-Dependencies
-------------
+## Dependencies
 
 None
 
-Example Playbook
-----------------
+## Example Playbook
 
 For default behaviour of role (i.e. installation of **google-chrome-stable** package) in ansible playbooks.
+
 ```yaml
 - hosts: servers
   roles:
@@ -69,6 +66,7 @@ For default behaviour of role (i.e. installation of **google-chrome-stable** pac
 ```
 
 For customizing behavior of role (i.e. installation of latest **google-chrome-stable** package) in ansible playbooks.
+
 ```yaml
 - hosts: servers
   roles:
@@ -78,6 +76,7 @@ For customizing behavior of role (i.e. installation of latest **google-chrome-st
 ```
 
 For customizing behavior of role (i.e. un-installation of **google-chrome-stable** package) in ansible playbooks.
+
 ```yaml
 - hosts: servers
   roles:
@@ -86,12 +85,10 @@ For customizing behavior of role (i.e. un-installation of **google-chrome-stable
         googlechrome_desired_state: absent
 ```
 
-License
--------
+## License
 
 [MIT](https://github.com/darkwizard242/ansible-role-googlechrome/blob/master/LICENSE)
 
-Author Information
-------------------
+## Author Information
 
 This role was created by [Ali Muhammad](https://www.linkedin.com/in/ali-muhammad-759791130/).

@@ -2,7 +2,7 @@
 
 # Ansible Role: googlechrome
 
-Role to install (_by default_) `google-chrome-stable` package for Debian based and EL based systems or uninstall (_if passed as var_) on **Debian** based and **EL** based systems.
+Role to install (_by default_) [google-chrome-stable](https://www.google.com/chrome/) package for Debian based and EL based systems or uninstall (_if passed as var_) on **Debian** based and **EL** based systems.
 
 ## Requirements
 
@@ -57,7 +57,7 @@ For default behaviour of role (i.e. installation of **google-chrome-stable** pac
 ```yaml
 - hosts: servers
   roles:
-    - role: darkwizard242.googlechrome
+    - darkwizard242.googlechrome
 ```
 
 For customizing behavior of role (i.e. installation of latest **google-chrome-stable** package) in ansible playbooks.
@@ -65,9 +65,9 @@ For customizing behavior of role (i.e. installation of latest **google-chrome-st
 ```yaml
 - hosts: servers
   roles:
-    - role: darkwizard242.googlechrome
-      vars:
-        googlechrome_desired_state: latest
+    - darkwizard242.googlechrome
+  vars:
+    googlechrome_desired_state: latest
 ```
 
 For customizing behavior of role (i.e. un-installation of **google-chrome-stable** package) in ansible playbooks.
@@ -75,9 +75,9 @@ For customizing behavior of role (i.e. un-installation of **google-chrome-stable
 ```yaml
 - hosts: servers
   roles:
-    - role: darkwizard242.googlechrome
-      vars:
-        googlechrome_desired_state: absent
+    - darkwizard242.googlechrome
+  vars:
+    googlechrome_desired_state: absent
 ```
 
 ## License

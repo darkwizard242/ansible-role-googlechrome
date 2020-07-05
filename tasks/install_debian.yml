@@ -1,17 +1,19 @@
 ---
-# tasks file for googlechrome - Ubuntu
+# tasks file for googlechrome | Debian/Ubuntu Family
 
-- name: Add gpg signing key for {{ googlechrome_app_name }}.
+- name: Debian/Ubuntu Family | Add gpg signing key for {{ googlechrome_app_name }}
   apt_key:
     url: "{{ googlechrome_gpg_key }}"
     state: present
-- name: Adding repository {{ googlechrome_repo_debian }} on Debian based systems.
+
+- name: Debian/Ubuntu Family | Adding repository {{ googlechrome_repo_debian }}
   apt_repository:
     repo: "{{ googlechrome_repo_debian }}"
     state: "{{ googlechrome_repo_desired_state }}"
     filename: "{{ googlechrome_repo_debian_filename }}"
     update_cache: yes
-- name: Installing {{ googlechrome_app_name }} on Debian based systems.
+
+- name: Debian/Ubuntu Family | Installing {{ googlechrome_app_name }}
   apt:
     name: "{{ googlechrome_app_name }}"
     state: "{{ googlechrome_desired_state }}"

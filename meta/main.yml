@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   role_name: googlechrome
-  author: Ali Muhammad
+  author: darkwizard242
   description: Google Chrome stable version installation or uninstallation in Debian/EL based systems with amd64 architecture.
   company: none
   license: MIT

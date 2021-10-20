@@ -25,7 +25,7 @@ scenario:
     - syntax
     - create
     - converge
-    - idempotence
+    # - idempotence
     - verify
     - cleanup
     - destroy

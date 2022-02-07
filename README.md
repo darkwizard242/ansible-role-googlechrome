@@ -31,20 +31,20 @@ googlechrome_repo_el_filename: google-chrome
 
 ### Variables table:
 
-Variable                          | Value (default)                                                       | Description
---------------------------------- | --------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------
-googlechrome_app                  | `google-chrome-stable`                                                | Defines the app to install i.e. **google-chrome-stable**
-googlechrome_desired_state        | `present`                                                             | Defined to dynamically set whether to install (i.e. either `present` or `latest`) or uninstall (i.e. `absent`) the package. Defaults to `present`
-googlechrome_gpg_key              | <https://dl.google.com/linux/linux_signing_key.pub>                   | GPG key for Google Chrome
-googlechrome_repo_desired_state   | `present`                                                             | State for repo to download Google Chrome from. Can either be 'present' or 'absent'.
-googlechrome_repo_debian          | `deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main` | Google Chrome's repo link for Debian based systems.
-googlechrome_repo_debian_filename | `google-chrome`                                                       | Name of file to save for googlechrome's repo in `/etc/apt/sources.list.d/`
-googlechrome_repo_el              | <http://dl.google.com/linux/chrome/rpm/stable/x86_64>                 | Google Chrome's repo link for EL based systems.
-googlechrome_repo_el_name         | `google-chrome`                                                       | Google Chrome repo name for EL based systems.
-googlechrome_repo_el_description  | `google-chrome`                                                       | Description for Google Chrome's repo for EL based systems.
-googlechrome_repo_el_gpgcheck     | **yes**                                                               | Boolean operation for performing gpg check against gpg key. Can either be **yes** or **no**.
-googlechrome_repo_el_enabled      | **yes**                                                               | Boolean operation for setting repository to enabled or disabled. Can either be **yes** or **no**.
-googlechrome_repo_el_filename     | `google-chrome`                                                       | Name of file to save for googlechrome's repo in `/etc/yum.repos.d/`
+Variable                          | Description
+--------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------
+googlechrome_app                  | Defines the app to install i.e. **google-chrome-stable**
+googlechrome_desired_state        | Defined to dynamically set whether to install (i.e. either `present` or `latest`) or uninstall (i.e. `absent`) the package. Defaults to `present`
+googlechrome_gpg_key              | GPG key for Google Chrome
+googlechrome_repo_desired_state   | State for repo to download Google Chrome from. Can either be 'present' or 'absent'.
+googlechrome_repo_debian          | Google Chrome's repo link for Debian based systems.
+googlechrome_repo_debian_filename | Name of file to save for googlechrome's repo in `/etc/apt/sources.list.d/`
+googlechrome_repo_el              | Google Chrome's repo link for EL based systems.
+googlechrome_repo_el_name         | Google Chrome repo name for EL based systems.
+googlechrome_repo_el_description  | Description for Google Chrome's repo for EL based systems.
+googlechrome_repo_el_gpgcheck     | Boolean operation for performing gpg check against gpg key. Can either be **yes** or **no**.
+googlechrome_repo_el_enabled      | Boolean operation for setting repository to enabled or disabled. Can either be **yes** or **no**.
+googlechrome_repo_el_filename     | Name of file to save for googlechrome's repo in `/etc/yum.repos.d/`
 
 ## Dependencies
 

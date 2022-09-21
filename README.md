@@ -19,7 +19,7 @@ googlechrome_app: google-chrome-stabl
 googlechrome_desired_state: present
 googlechrome_gpg_key: https://dl.google.com/linux/linux_signing_key.pub
 googlechrome_repo_desired_state: present
-googlechrome_repo_debian: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+googlechrome_repo_debian: deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main
 googlechrome_repo_debian_filename: google-chrome
 googlechrome_repo_el: http://dl.google.com/linux/chrome/rpm/stable/x86_64
 googlechrome_repo_el_name: google-chrome

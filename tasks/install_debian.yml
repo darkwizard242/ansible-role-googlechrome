@@ -2,19 +2,19 @@
 # tasks file for googlechrome | Debian/Ubuntu Family
 
 - name: Debian/Ubuntu Family | Add gpg signing key for {{ googlechrome_app_name }}
-  apt_key:
+  ansible.builtin.apt_key:
     url: "{{ googlechrome_gpg_key }}"
     state: present
 
 - name: Debian/Ubuntu Family | Adding repository {{ googlechrome_repo_debian }}
-  apt_repository:
+  ansible.builtin.apt_repository:
     repo: "{{ googlechrome_repo_debian }}"
     state: "{{ googlechrome_repo_desired_state }}"
     filename: "{{ googlechrome_repo_debian_filename }}"
     update_cache: yes
 
 - name: Debian/Ubuntu Family | Installing {{ googlechrome_app_name }}
-  apt:
+  ansible.builtin.apt:
     name: "{{ googlechrome_app_name }}"
     state: "{{ googlechrome_desired_state }}"
     force_apt_get: yes

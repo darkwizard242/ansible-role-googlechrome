@@ -2,7 +2,7 @@
 # defaults file for googlechrome
 googlechrome_app_name: google-chrome-stable
 googlechrome_gpg_key: https://dl.google.com/linux/linux_signing_key.pub
-googlechrome_repo_debian: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+googlechrome_repo_debian: deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main
 googlechrome_repo_debian_filename: google-chrome
 googlechrome_repo_el_name: google-chrome
 googlechrome_repo_el_description: google-chrome

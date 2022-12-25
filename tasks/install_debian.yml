@@ -1,6 +1,10 @@
 ---
 # tasks file for googlechrome | Debian/Ubuntu Family
 
+- name: Install gpg
+  ansible.builtin.package:
+    name: gpg
+
 - name: Debian/Ubuntu Family | Add gpg signing key for {{ googlechrome_app_name }}
   ansible.builtin.apt_key:
     url: "{{ googlechrome_gpg_key }}"

@@ -1,14 +1,11 @@
 ---
 # tasks file for googlechrome | Debian/Ubuntu Family
 
-- name: Make sure we have the latest metadata for apt so gpg can be installed
+- name: Update repository cache and install gnupg2
   ansible.builtin.apt:
-    update_cache: True
+    name: gnupg2
+    update_cache: true
   when: "ansible_os_family == 'Debian'"
-
-- name: Install gpg
-  ansible.builtin.package:
-    name: gpg
 
 - name: Debian/Ubuntu Family | Add gpg signing key for {{ googlechrome_app_name }}
   ansible.builtin.apt_key:

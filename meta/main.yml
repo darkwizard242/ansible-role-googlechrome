@@ -10,6 +10,7 @@ galaxy_info:
   platforms:
     - name: Ubuntu
       versions:
+        - noble
         - jammy
         - focal
         - bionic
@@ -20,7 +21,6 @@ galaxy_info:
     - name: EL
       versions:
         - 8
-        - 7
 
   galaxy_tags:
     - googlechrome

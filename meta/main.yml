@@ -13,7 +13,6 @@ galaxy_info:
         - noble
         - jammy
         - focal
-        - bionic
     - name: Debian
       versions:
         - bullseye

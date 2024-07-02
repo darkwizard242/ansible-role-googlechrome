@@ -2,6 +2,7 @@
 # tasks file for googlechrome | EL Family
 
 - name: EL Family | Adding repository {{ googlechrome_repo_el }}
+  become: true
   ansible.builtin.yum_repository:
     name: "{{ googlechrome_repo_el_name }}"
     description: "{{ googlechrome_repo_el_description }}"
@@ -13,6 +14,7 @@
     enabled: "{{ googlechrome_repo_el_enabled }}"
 
 - name: EL Family | Installing {{ googlechrome_app_name }}
+  become: true
   ansible.builtin.yum:
     name: "{{ googlechrome_app_name }}"
     state: "{{ googlechrome_desired_state }}"
